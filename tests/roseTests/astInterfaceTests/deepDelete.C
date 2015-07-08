@@ -8,10 +8,10 @@ int main(int argc, char** argv)
   AstTests::runAllTests(project);
 
   //  generateDOT(*project);
-  SgNode* copy = deepCopy(project);
-  deepDelete(copy);
+  //    SgNode* copy = deepCopy(project);
+  deepDelete(SageInterface::findMain(project));
 
-  AstTests::runAllTests(project);
+  //  AstTests::runAllTests(project);
   printf("Test deepdelete finished successfully\n");
 //  backend(project);   
   return 0;

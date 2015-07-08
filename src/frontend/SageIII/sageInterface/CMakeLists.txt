@@ -13,6 +13,6 @@ add_dependencies(sageInterface rosetta_generated)
 ########### install files ###############
 install(
   FILES  sageInterface.h sageBuilder.h sageBuilderAsm.h integerOps.h abiStuff.h
-         sageFunctors.h sageGeneric.h sageInterfaceAsm.h
+         sageFunctors.h sageGeneric.h sageInterfaceAsm.h ASTDeletion.h
   DESTINATION ${INCLUDE_INSTALL_DIR}
   )

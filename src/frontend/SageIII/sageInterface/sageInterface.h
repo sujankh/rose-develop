@@ -2,6 +2,7 @@
 #define ROSE_SAGE_INTERFACE
 
 #include "sage3basic.hhh"
+#include "ASTDeletion.h"
 #include <stdint.h>
 #include <utility>
 
@@ -1594,10 +1595,13 @@ NodeType* getEnclosingNode(const SgNode* astNode, const bool includingSelf = fal
   scope->append_statement(), exprListExp->append_expression() etc. are not enough to handle side effect of parent pointers, symbol tables, preprocessing info, defining/nondefining pointers etc.
 */
 
+//SK (07/02/2015) Implementing Reed's deleteAST found in ASTDeletion.h instead of this deleteAST 
+#if 0
 // DQ (2/24/2009): Simple function to delete an AST subtree (used in outlining).
 //! Function to delete AST subtree's nodes only, users must take care of any dangling pointers, symbols or types that result.
 ROSE_DLL_API void deleteAST(SgNode* node);
-
+#endif
+ 
 //! Special purpose function for deleting AST expression tress containing valid original expression trees in constant folded expressions (for internal use only).
 ROSE_DLL_API void deleteExpressionTreeWithOriginalExpressionSubtrees(SgNode* root);
 

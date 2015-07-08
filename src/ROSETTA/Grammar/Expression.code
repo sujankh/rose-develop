@@ -2777,8 +2777,11 @@ SgBinaryOp::get_type() const
      if (p_expression_type != NULL)
         {
           expression_type_name = p_expression_type->class_name();
-          printf ("Found an case where $CLASSNAME::p_expression_type != NULL on %s expression_type_name = %s \n",
-               this->class_name().c_str(),expression_type_name.c_str());
+
+	  //SK(07/02/2015) Copying Reed's Changes 
+          //printf ("Found an case where $CLASSNAME::p_expression_type != NULL on %s expression_type_name = %s \n",
+          //     this->class_name().c_str(),expression_type_name.c_str());
+
         }
 
      if (variantT() == V_SgAddOp || variantT() == V_SgSubtractOp)

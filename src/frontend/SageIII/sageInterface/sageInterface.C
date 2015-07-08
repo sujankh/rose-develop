@@ -15456,7 +15456,9 @@ SageInterface::supplementReplacementSymbolMap ( rose_hash::unordered_map<SgNode*
    }
 #endif
 
-
+#if 0
+//SK (07/02/2015): Switching to Reed's implementation of deleteAST in ASTDeletion.h
+//Disable this
 void
 SageInterface::deleteAST ( SgNode* n )
    {
@@ -16538,6 +16540,7 @@ SageInterface::deleteAST ( SgNode* n )
 #endif
    }
 
+#endif
 
 
 

@@ -1614,6 +1614,13 @@ UnparseLanguageIndependentConstructs::unparseStatement(SgStatement* stmt, SgUnpa
      printOutComments (stmt);
 #endif
 
+     //SK(07/01/2015): Reed's fix on AST deletion
+     if(stmt->get_file_info() == NULL)
+       {
+	 return;
+       }
+
+     
      ROSE_ASSERT(stmt->get_file_info() != NULL);
 
   // FIXME cause conflict in "make check"?
